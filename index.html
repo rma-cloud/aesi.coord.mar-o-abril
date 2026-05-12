@@ -1,595 +1,780 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apresentação RAR - Coordenação - AESI</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <style>
-        body {
-            font-family: 'Open Sans', sans-serif;
-            background-color: #f8fafc;
-        }
-        h1, h2, h3, .font-poppins {
-            font-family: 'Poppins', sans-serif;
-        }
-        .tab-active {
-            border-bottom: 3px solid #fbbf24;
-            color: #fbbf24;
-        }
-        .content-section {
-            display: none;
-        }
-        .content-section.active {
-            display: block;
-            animation: fadeIn 0.4s ease-out;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(8px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .stat-card {
-            transition: transform 0.2s;
-        }
-        .stat-card:hover {
-            transform: translateY(-2px);
-        }
-        .arrow-up { color: #10b981; } /* Green */
-        .arrow-down { color: #ef4444; } /* Red */
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apresentação RAR - Coordenação - AESI</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+body {
+font-family: 'Open Sans', sans-serif;
+background-color: #f8fafc;
+}
+h1, h2, h3, .font-poppins {
+font-family: 'Poppins', sans-serif;
+}
+.tab-active {
+border-bottom: 3px solid #fbbf24;
+color: #fbbf24;
+}
+.content-section {
+display: none;
+}
+.content-section.active {
+display: block;
+animation: fadeIn 0.4s ease-out;
+}
+@keyframes fadeIn {
+from { opacity: 0; transform: translateY(8px); }
+to { opacity: 1; transform: translateY(0); }
+}
+.stat-card {
+transition: transform 0.2s;
+}
+.stat-card:hover {
+transform: translateY(-2px);
+}
+.arrow-up { color: #10b981; } /* Green */
+.arrow-down { color: #ef4444; } /* Red */
+</style>
 </head>
 <body class="min-h-screen flex flex-col">
-
-    <!-- Cabeçalho -->
-    <header class="bg-[#003366] text-white sticky top-0 z-50 shadow-xl">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
-                <div class="flex-shrink-0 flex items-center gap-3">
-                    <i class="fa-solid fa-chart-line text-yellow-400 text-2xl"></i>
-                    <span class="font-poppins font-bold text-lg tracking-tight uppercase">DADOS RAR - COORDENAÇÃO - AESI</span>
-                </div>
-                <nav class="hidden md:flex space-x-6 h-full items-center text-xs font-semibold uppercase tracking-wider">
-                    <button onclick="showSection('marco')" class="nav-btn tab-active px-2 py-7 transition-all" id="btn-marco">Março 2026</button>
-                    <button onclick="showSection('abril')" class="nav-btn px-2 py-7 transition-all" id="btn-abril">Abril 2026</button>
-                </nav>
-            </div>
-        </div>
-    </header>
-
-    <main class="flex-grow">
-        
-        <!-- SECÇÃO: MARÇO 2026 -->
-        <section id="marco" class="content-section active">
-            <div class="bg-[#004080] text-white py-16">
-                <div class="max-w-7xl mx-auto px-4 text-center md:text-left">
-                    <h2 class="text-4xl font-bold mb-2">Coordenação - AESI - Março 2026</h2>
-                    <p class="text-blue-100 flex items-center justify-center md:justify-start gap-2 text-lg">
-                        <i class="fa-solid fa-user-tie"></i> Coordenador(a): Adriana Estevam
-                    </p>
-                </div>
-            </div>
-            
-            <div class="max-w-7xl mx-auto px-4 py-12 space-y-8">
-                <!-- 1. DADOS GERAIS E RENTABILIDADE -->
-                <div>
-                    <h3 class="text-2xl font-bold text-gray-800 mb-6 border-l-4 border-blue-600 pl-3">1. Dados Gerais e Rentabilidade</h3>
-                    
-                    <div class="grid md:grid-cols-2 gap-6 mb-6">
-                        <!-- Fevereiro -->
-                        <div class="bg-slate-100 p-6 rounded-2xl shadow-sm border border-slate-200">
-                            <h4 class="font-bold text-slate-700 text-lg mb-4">Fevereiro</h4>
-                            <div class="grid grid-cols-2 gap-4">
-                                <div>
-                                    <p class="text-gray-500 text-xs font-bold uppercase mb-1">Receita Bruta</p>
-                                    <p class="text-xl font-bold text-gray-800">R$ 1,53 milhão</p>
-                                </div>
-                                <div>
-                                    <p class="text-gray-500 text-xs font-bold uppercase mb-1">Receita Líquida</p>
-                                    <p class="text-xl font-bold text-gray-800">R$ 1.303.137,55</p>
-                                </div>
-                                <div>
-                                    <p class="text-gray-500 text-xs font-bold uppercase mb-1">Custo Operacional</p>
-                                    <p class="text-xl font-bold text-red-600">R$ 315.103,81</p>
-                                </div>
-                                <div>
-                                    <p class="text-gray-500 text-xs font-bold uppercase mb-1">Margem de Lucro</p>
-                                    <p class="text-xl font-bold text-blue-600">76%</p>
-                                </div>
-                            </div>
-                            <div class="mt-4 pt-4 border-t border-slate-200">
-                                <p class="text-gray-500 text-xs font-bold uppercase mb-1">Resultado Final</p>
-                                <p class="text-lg font-bold text-green-600">R$ 988.033,74 [POSITIVO]</p>
-                            </div>
-                        </div>
-
-                        <!-- Março -->
-                        <div class="bg-white p-6 rounded-2xl shadow-sm border-b-4 border-blue-600 stat-card">
-                            <h4 class="font-bold text-blue-900 text-lg mb-4">Março</h4>
-                            <div class="grid grid-cols-2 gap-4">
-                                <div>
-                                    <p class="text-gray-400 text-xs font-bold uppercase mb-1">Receita Bruta</p>
-                                    <p class="text-2xl font-bold text-gray-800">R$ 503.347,00</p>
-                                </div>
-                                <div>
-                                    <p class="text-gray-400 text-xs font-bold uppercase mb-1">Receita Líquida</p>
-                                    <p class="text-2xl font-bold text-gray-800">R$ 427.844,95</p>
-                                </div>
-                                <div>
-                                    <p class="text-gray-400 text-xs font-bold uppercase mb-1">Custo Operacional</p>
-                                    <p class="text-xl font-bold text-red-500">R$ 397.267,08</p>
-                                </div>
-                                <div>
-                                    <p class="text-gray-400 text-xs font-bold uppercase mb-1">Margem de Lucro</p>
-                                    <p class="text-xl font-bold text-blue-500">7%</p>
-                                </div>
-                            </div>
-                            <div class="mt-4 pt-4 border-t border-gray-100">
-                                <p class="text-gray-400 text-xs font-bold uppercase mb-1">Resultado Final</p>
-                                <p class="text-xl font-bold text-green-500">R$ 30.577,87 [POSITIVO]</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Análise -->
-                    <div class="bg-blue-50 p-6 rounded-2xl border-l-4 border-blue-400">
-                        <h4 class="font-bold text-blue-900 mb-2">Análise do Coordenador: Por que tivemos a variação na margem de lucro neste período? Quais foram os principais ofensores de custo ou impulsionadores de receita?</h4>
-                        <p class="text-sm text-gray-700 leading-relaxed text-justify">
-                            No mês de março, observamos uma redução na margem de lucro em comparação ao período anterior, principalmente em razão do aumento do custo operacional. Esse cenário está diretamente relacionado ao plano de ação implementado para reestruturação e melhoria da operação (prestador terceirizado e advogados internos fora da pauta de audiências).<br><br>
-                            Para os próximos meses, a expectativa é de reequilíbrio da margem de lucro, com a redução dos custos com correspondentes, decorrente do retorno dos advogados internos à pauta de audiências e do encerramento das contratações externas, somada ao aumento do faturamento e aos ajustes na estrutura da equipe, o que tende a promover maior eficiência operacional e uma melhor composição de resultados.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- 2. METAS CLIENTE -->
-                <div>
-                    <h3 class="text-2xl font-bold text-gray-800 mb-6 border-l-4 border-yellow-400 pl-3">2. Metas Cliente (Desempenho por Região)</h3>
-                    
-                    <div class="grid md:grid-cols-3 gap-6 mb-6">
-                        <!-- Nordeste -->
-                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
-                            <div class="bg-slate-800 text-white py-2 px-4 rounded-lg mb-4 text-center font-bold">NORDESTE</div>
-                            <ul class="space-y-3 text-sm text-gray-700">
-                                <li class="flex justify-between items-center pb-2 border-b">
-                                    <span>Êxito:</span> 
-                                    <span class="font-bold">85% <span class="text-xs text-gray-400 font-normal">(Meta: 84%)</span> <i class="fa-solid fa-arrow-up arrow-up"></i></span>
-                                </li>
-                                <li class="flex justify-between items-center pb-2 border-b">
-                                    <span>TKM:</span> 
-                                    <span class="font-bold">R$ 780,00 <span class="text-xs text-gray-400 font-normal">(Meta: R$ 975,00)</span> <i class="fa-solid fa-arrow-up arrow-up"></i></span>
-                                </li>
-                                <li class="flex justify-between items-center pb-2 border-b">
-                                    <span>Acordo:</span> 
-                                    <span class="font-bold">1% <span class="text-xs text-gray-400 font-normal">(Meta: 7%)</span> <i class="fa-solid fa-arrow-down arrow-down"></i></span>
-                                </li>
-                                <li class="flex justify-between items-center pb-2 border-b">
-                                    <span>Encerramento:</span> 
-                                    <span class="font-bold text-right">725<br><span class="text-[10px] text-gray-400 font-normal">sendo 488 do ranking</span></span>
-                                </li>
-                            </ul>
-                            <div class="mt-4 bg-gray-50 p-3 rounded-lg text-xs space-y-1">
-                                <p><strong>Ranking Operacional do mês:</strong> 2º Lugar (só existem 2 escritórios)</p>
-                                <p><strong>Ranking Performance do mês:</strong> 1º lugar</p>
-                                <p><strong>Ranking geral (peracional + perfor):</strong> 1º lugar</p>
-                            </div>
-                        </div>
-
-                        <!-- Norte -->
-                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
-                            <div class="bg-slate-800 text-white py-2 px-4 rounded-lg mb-4 text-center font-bold">NORTE</div>
-                            <ul class="space-y-3 text-sm text-gray-700">
-                                <li class="flex justify-between items-center pb-2 border-b">
-                                    <span>Êxito:</span> 
-                                    <span class="font-bold">90% <span class="text-xs text-gray-400 font-normal">(Meta: 92%)</span> <i class="fa-solid fa-arrow-down arrow-down"></i></span>
-                                </li>
-                                <li class="flex justify-between items-center pb-2 border-b">
-                                    <span>TKM:</span> 
-                                    <span class="font-bold">R$ 343,00 <span class="text-xs text-gray-400 font-normal">(Meta: R$ 377,00)</span> [<i class="fa-solid fa-arrow-up arrow-up"></i>]</span>
-                                </li>
-                                <li class="flex justify-between items-center pb-2 border-b">
-                                    <span>Acordo:</span> 
-                                    <span class="font-bold">0% <span class="text-xs text-gray-400 font-normal">(Meta: 6%)</span> [<i class="fa-solid fa-arrow-down arrow-down"></i>]</span>
-                                </li>
-                                <li class="flex justify-between items-center pb-2 border-b">
-                                    <span>Encerramento:</span> 
-                                    <span class="font-bold text-right">123<br><span class="text-[10px] text-gray-400 font-normal">sendo 92 do ranking</span></span>
-                                </li>
-                            </ul>
-                            <div class="mt-4 bg-gray-50 p-3 rounded-lg text-xs space-y-1">
-                                <p><strong>Ranking Operacional:</strong> 3º Lugar (temos 3 prestadores)</p>
-                                <p><strong>Ranking Performance do mês:</strong> 1º lugar</p>
-                                <p><strong>Ranking geral (operacional + perfor):</strong> 1º lugar</p>
-                            </div>
-                        </div>
-
-                        <!-- Sudeste -->
-                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
-                            <div class="bg-slate-800 text-white py-2 px-4 rounded-lg mb-4 text-center font-bold">SUDESTE</div>
-                            <ul class="space-y-3 text-sm text-gray-700">
-                                <li class="flex justify-between items-center pb-2 border-b">
-                                    <span>Êxito:</span> 
-                                    <span class="font-bold">82% <span class="text-xs text-gray-400 font-normal">(Meta: 83%)</span> <i class="fa-solid fa-arrow-down arrow-down"></i></span>
-                                </li>
-                                <li class="flex justify-between items-center pb-2 border-b">
-                                    <span>TKM:</span> 
-                                    <span class="font-bold">R$494,00 <span class="text-xs text-gray-400 font-normal">(Meta: R$ 1065,00)</span> <i class="fa-solid fa-arrow-up arrow-up"></i></span>
-                                </li>
-                                <li class="flex justify-between items-center pb-2 border-b">
-                                    <span>Acordo:</span> 
-                                    <span class="font-bold">0% <span class="text-xs text-gray-400 font-normal">(Meta: 7%)</span> <i class="fa-solid fa-arrow-down arrow-down"></i></span>
-                                </li>
-                                <li class="flex justify-between items-center pb-2 border-b">
-                                    <span>Encerramento:</span> 
-                                    <span class="font-bold text-right">272<br><span class="text-[10px] text-gray-400 font-normal">sendo 206 do ranking</span></span>
-                                </li>
-                            </ul>
-                            <div class="mt-4 bg-gray-50 p-3 rounded-lg text-xs space-y-1">
-                                <p><strong>Ranking Operacional:</strong> 3º Lugar (temos 3 prestadores)</p>
-                                <p><strong>Ranking Performance do mês:</strong> 1º lugar</p>
-                                <p><strong>Ranking geral (peracional + perfor):</strong> 1º lugar</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="bg-yellow-50 p-5 rounded-2xl border border-yellow-200 text-sm text-gray-800">
-                        <h4 class="font-bold mb-2">Obs:</h4>
-                        <ul class="list-none space-y-2">
-                            <li><strong>(i) Março 2026:</strong> No ranking do mês, ficamos em 4º lugar operacional e 1º lugar performance;</li>
-                            <li><strong>(ii) No acumulado do ano de 2026:</strong> 5º lugar operacional e 5º lugar performance;</li>
-                            <li class="text-justify mt-2"><strong>(iii) Plano de ação:</strong> considerando a reação mais imediata que conseguimos apresentar no mês de março, em relação aos indicadores de performance, o plano de ação está focado na melhoria dos indicadores operacionais, especialmente nos pilares de cadastro e pagamentos, por meio do alinhamento com o cliente para compreensão dos alertas de cadastro e eliminação de backlog junto à CJ. Em paralelo, foi implementada a checagem diária de 100% dos pareceres no Kanban, garantindo tratativa tempestiva e correta dos casos, com impacto direto na redução de atrasos e melhoria da relação com o cliente. Como medida complementar, será designado um advogado responsável pelo direcionamento estratégico dos pareceres (recurso ou pagamento), trazendo mais agilidade ao fluxo pós-sentença e maior controle dos indicadores.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- 3, 4, 5. OUTROS INDICADORES -->
-                <div class="grid md:grid-cols-3 gap-6">
-                    <!-- Qualidade e Risco -->
-                    <div class="bg-white p-6 rounded-2xl shadow-sm border-t-4 border-red-500">
-                        <h3 class="font-bold text-lg mb-4 text-gray-800">3. Qualidade e Risco</h3>
-                        
-                        <div class="mb-4">
-                            <h4 class="text-xs font-bold uppercase text-gray-500 border-b pb-1 mb-2">Prejuízos Processuais / Operacionais</h4>
-                            <p class="text-sm"><span class="font-semibold text-gray-600">Qtd de Ocorrências:</span> 1</p>
-                            <p class="text-sm"><span class="font-semibold text-gray-600">Valor Total Impacto:</span> R$ 72,56</p>
-                            <p class="text-sm"><span class="font-semibold text-gray-600">Principais Motivos:</span> valor remanescente custas finais</p>
-                        </div>
-                        
-                        <div class="mb-4">
-                            <h4 class="text-xs font-bold uppercase text-gray-500 border-b pb-1 mb-2">Pagamentos Recebidos Em Atraso</h4>
-                            <p class="text-sm"><span class="font-semibold text-gray-600">Quantidade:</span> não tivemos</p>
-                        </div>
-                        
-                        <div>
-                            <h4 class="text-xs font-bold uppercase text-gray-500 border-b pb-1 mb-2">NPS</h4>
-                            <p class="text-sm"><span class="font-semibold text-gray-600">Nota da Equipe:</span> 1 nota 7 e 1 nota 8 (Meta: 10)</p>
-                            <p class="text-sm"><span class="font-semibold text-gray-600">Principais Motivos Detração:</span> indicadores operacionais e encerramento;</p>
-                        </div>
-                    </div>
-
-                    <!-- Gestão e Pessoas -->
-                    <div class="bg-white p-6 rounded-2xl shadow-sm border-t-4 border-purple-500">
-                        <h3 class="font-bold text-lg mb-4 text-gray-800">4. Gestão da Operação e Pessoas</h3>
-                        
-                        <div class="mb-6">
-                            <h4 class="text-xs font-bold uppercase text-gray-500 border-b pb-1 mb-2">Saídas</h4>
-                            <p class="text-sm"><span class="font-semibold text-gray-600">Quantidade:</span> 2 ( TSSO, BBR e LMP )</p>
-                            <p class="text-sm mt-1 text-gray-700 italic">"Mudança de área de atuação e aprovação em concurso."</p>
-                        </div>
-                        
-                        <div>
-                            <h4 class="text-xs font-bold uppercase text-gray-500 border-b pb-1 mb-2">Progressões</h4>
-                            <ul class="space-y-3">
-                                <li class="bg-purple-50 p-2 rounded text-sm">
-                                    <span class="block font-bold text-purple-900">Advogado: MMF</span>
-                                    <span class="block text-purple-700">Nível: JR 3</span>
-                                </li>
-                                <li class="bg-purple-50 p-2 rounded text-sm">
-                                    <span class="block font-bold text-purple-900">Advogado: WVS</span>
-                                    <span class="block text-purple-700">Nível: JR 2</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Projetos e Projeções -->
-                    <div class="bg-white p-6 rounded-2xl shadow-sm border-t-4 border-teal-500">
-                        <h3 class="font-bold text-lg mb-4 text-gray-800">5. Projetos e Projeções</h3>
-                        
-                        <div>
-                            <h4 class="text-xs font-bold uppercase text-gray-500 border-b pb-1 mb-2">Desenvolvimento do Cliente</h4>
-                            <div class="space-y-2 text-sm">
-                                <p><span class="font-semibold text-gray-600">Ideia/Iniciativa:</span><br>Projeto litigância abusiva (TJBA e TJSP)</p>
-                                <p><span class="font-semibold text-gray-600">Status:</span> Iniciado</p>
-                                <p class="text-justify"><span class="font-semibold text-gray-600">Impacto Esperado:</span><br>O projeto tem como objetivo mitigar o impacto financeiro e operacional decorrente de demandas com indícios de litigância abusiva, por meio de atuação coordenada nas esferas cível e administrativa.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- SECÇÃO: ABRIL 2026 -->
-        <section id="abril" class="content-section">
-            <div class="bg-[#004080] text-white py-16">
-                <div class="max-w-7xl mx-auto px-4 text-center md:text-left">
-                    <h2 class="text-4xl font-bold mb-2">Coordenação - AESI - Abril 2026</h2>
-                    <p class="text-blue-100 flex items-center justify-center md:justify-start gap-2 text-lg">
-                        <i class="fa-solid fa-user-tie"></i> Coordenador(a): Adriana Estevam
-                    </p>
-                </div>
-            </div>
-            
-            <div class="max-w-7xl mx-auto px-4 py-12 space-y-8">
-                <!-- 1. DADOS GERAIS E RENTABILIDADE -->
-                <div>
-                    <h3 class="text-2xl font-bold text-gray-800 mb-6 border-l-4 border-blue-600 pl-3">1. Dados Gerais e Rentabilidade <span class="text-sm font-normal text-gray-500 italic">- o dados do mês de abril serão apurados apenas final do mês</span></h3>
-                    
-                    <div class="grid md:grid-cols-3 gap-6 mb-6">
-                        <!-- Fevereiro -->
-                        <div class="bg-slate-100 p-6 rounded-2xl shadow-sm border border-slate-200 opacity-80">
-                            <h4 class="font-bold text-slate-700 text-lg mb-4">Fevereiro</h4>
-                            <div class="space-y-2 text-sm">
-                                <div class="flex justify-between"><span>Rec. Bruta:</span> <span class="font-bold">R$ 1,53 milhão</span></div>
-                                <div class="flex justify-between"><span>Rec. Líquida:</span> <span class="font-bold">R$ 1.303.137,55</span></div>
-                                <div class="flex justify-between"><span>Custo Oper.:</span> <span class="font-bold text-red-600">R$ 315.103,81</span></div>
-                                <div class="flex justify-between"><span>Result. Final:</span> <span class="font-bold text-green-600">R$ 988.033,74 [POSITIVO]</span></div>
-                                <div class="flex justify-between"><span>Margem:</span> <span class="font-bold text-blue-600">76%</span></div>
-                            </div>
-                        </div>
-
-                        <!-- Março -->
-                        <div class="bg-slate-100 p-6 rounded-2xl shadow-sm border border-slate-200 opacity-80">
-                            <h4 class="font-bold text-slate-700 text-lg mb-4">Março</h4>
-                            <div class="space-y-2 text-sm">
-                                <div class="flex justify-between"><span>Rec. Bruta:</span> <span class="font-bold">R$ 503.347,00</span></div>
-                                <div class="flex justify-between"><span>Rec. Líquida:</span> <span class="font-bold">R$ 427.844,95</span></div>
-                                <div class="flex justify-between"><span>Custo Oper.:</span> <span class="font-bold text-red-600">R$ 397.267,08</span></div>
-                                <div class="flex justify-between"><span>Result. Final:</span> <span class="font-bold text-green-600">R$ 30.577,87 [POSITIVO]</span></div>
-                                <div class="flex justify-between"><span>Margem:</span> <span class="font-bold text-blue-600">7%</span></div>
-                            </div>
-                        </div>
-
-                        <!-- Abril -->
-                        <div class="bg-white p-6 rounded-2xl shadow-sm border-b-4 border-blue-600 stat-card">
-                            <h4 class="font-bold text-blue-900 text-lg mb-4">Abril</h4>
-                            <div class="space-y-3 text-sm">
-                                <div class="flex justify-between items-center border-b pb-1">
-                                    <span class="text-gray-500 uppercase font-bold text-xs">Receita Bruta</span> 
-                                    <span class="font-bold text-gray-800">R$ [Valor]</span>
-                                </div>
-                                <div class="flex justify-between items-center border-b pb-1">
-                                    <span class="text-gray-500 uppercase font-bold text-xs">Receita Líquida</span> 
-                                    <span class="font-bold text-gray-800">R$ [Valor]</span>
-                                </div>
-                                <div class="flex justify-between items-center border-b pb-1">
-                                    <span class="text-gray-500 uppercase font-bold text-xs">Custo Operacional</span> 
-                                    <span class="font-bold text-gray-800">R$ [Valor]</span>
-                                </div>
-                                <div class="flex justify-between items-center border-b pb-1">
-                                    <span class="text-gray-500 uppercase font-bold text-xs">Resultado Final</span> 
-                                    <span class="font-bold text-gray-800">R$ [Valor] [POSITIVO/NEGATIVO]</span>
-                                </div>
-                                <div class="flex justify-between items-center">
-                                    <span class="text-gray-500 uppercase font-bold text-xs">Margem de Lucro</span> 
-                                    <span class="font-bold text-blue-600 text-lg">[XX]%</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Análise -->
-                    <div class="bg-blue-50 p-6 rounded-2xl border-l-4 border-blue-400">
-                        <h4 class="font-bold text-blue-900 mb-2">Análise do Coordenador: Por que tivemos a variação na margem de lucro neste período? Quais foram os principais ofensores de custo ou impulsionadores de receita?</h4>
-                    </div>
-                </div>
-
-                <!-- 2. METAS CLIENTE -->
-                <div>
-                    <h3 class="text-2xl font-bold text-gray-800 mb-6 border-l-4 border-yellow-400 pl-3">2. Metas Cliente (Desempenho por Região)</h3>
-                    
-                    <div class="grid md:grid-cols-3 gap-6 mb-6">
-                        <!-- Nordeste -->
-                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
-                            <div class="bg-slate-800 text-white py-2 px-4 rounded-lg mb-4 text-center font-bold">NORDESTE</div>
-                            <ul class="space-y-3 text-sm text-gray-700">
-                                <li class="flex justify-between items-center pb-2 border-b">
-                                    <span>Êxito:</span> 
-                                    <span class="font-bold">84% <span class="text-xs text-gray-400 font-normal">(Meta: 85%)</span> <i class="fa-solid fa-arrow-down arrow-down"></i></span>
-                                </li>
-                                <li class="flex justify-between items-center pb-2 border-b">
-                                    <span>TKM:</span> 
-                                    <span class="font-bold">R$ 664,00 <span class="text-xs text-gray-400 font-normal">(Meta: R$ 977,00)</span> <i class="fa-solid fa-arrow-up arrow-up"></i></span>
-                                </li>
-                                <li class="flex justify-between items-center pb-2 border-b">
-                                    <span>Acordo:</span> 
-                                    <span class="font-bold">0% <span class="text-xs text-gray-400 font-normal">(Meta: 7%)</span> <i class="fa-solid fa-arrow-down arrow-down"></i></span>
-                                </li>
-                                <li class="flex justify-between items-center pb-2 border-b">
-                                    <span>Encerramento:</span> 
-                                    <span class="font-bold text-right">838<br><span class="text-[10px] text-gray-400 font-normal">sendo 432 do ranking</span></span>
-                                </li>
-                            </ul>
-                            <div class="mt-4 bg-gray-50 p-3 rounded-lg text-xs space-y-1">
-                                <p><strong>Ranking Operacional do mês:</strong> 3º Lugar</p>
-                                <p><strong>Ranking Performance do mês:</strong> 2º lugar</p>
-                                <p><strong>Ranking geral (operacional + perfor):</strong> 2º lugar</p>
-                            </div>
-                        </div>
-
-                        <!-- Norte -->
-                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
-                            <div class="bg-slate-800 text-white py-2 px-4 rounded-lg mb-4 text-center font-bold">NORTE</div>
-                            <ul class="space-y-3 text-sm text-gray-700">
-                                <li class="flex justify-between items-center pb-2 border-b">
-                                    <span>Êxito:</span> 
-                                    <span class="font-bold">92% <span class="text-xs text-gray-400 font-normal">(Meta: 93%)</span> <i class="fa-solid fa-arrow-down arrow-down"></i></span>
-                                </li>
-                                <li class="flex justify-between items-center pb-2 border-b">
-                                    <span>TKM:</span> 
-                                    <span class="font-bold">R$ 416,00 <span class="text-xs text-gray-400 font-normal">(Meta: R$ 385,00)</span> <i class="fa-solid fa-arrow-down arrow-down"></i></span>
-                                </li>
-                                <li class="flex justify-between items-center pb-2 border-b">
-                                    <span>Acordo:</span> 
-                                    <span class="font-bold">0% <span class="text-xs text-gray-400 font-normal">(Meta: 6%)</span> <i class="fa-solid fa-arrow-down arrow-down"></i></span>
-                                </li>
-                                <li class="flex justify-between items-center pb-2 border-b">
-                                    <span>Encerramento:</span> 
-                                    <span class="font-bold text-right">195<br><span class="text-[10px] text-gray-400 font-normal">sendo 98 do ranking</span></span>
-                                </li>
-                            </ul>
-                            <div class="mt-4 bg-gray-50 p-3 rounded-lg text-xs space-y-1">
-                                <p><strong>Ranking Operacional:</strong> 3º Lugar (temos 3 prestadores)</p>
-                                <p><strong>Ranking Performance do mês:</strong> 2º lugar</p>
-                                <p><strong>Ranking geral (operacional + perfor):</strong> 2º lugar</p>
-                            </div>
-                        </div>
-
-                        <!-- Sudeste -->
-                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
-                            <div class="bg-slate-800 text-white py-2 px-4 rounded-lg mb-4 text-center font-bold">SUDESTE</div>
-                            <ul class="space-y-3 text-sm text-gray-700">
-                                <li class="flex justify-between items-center pb-2 border-b">
-                                    <span>Êxito:</span> 
-                                    <span class="font-bold">82% <span class="text-xs text-gray-400 font-normal">(Meta: 80%)</span> <i class="fa-solid fa-arrow-up arrow-up"></i></span>
-                                </li>
-                                <li class="flex justify-between items-center pb-2 border-b">
-                                    <span>TKM:</span> 
-                                    <span class="font-bold">R$ 721,00 <span class="text-xs text-gray-400 font-normal">(Meta: R$ 1066,00)</span> <i class="fa-solid fa-arrow-up arrow-up"></i></span>
-                                </li>
-                                <li class="flex justify-between items-center pb-2 border-b">
-                                    <span>Acordo:</span> 
-                                    <span class="font-bold">0% <span class="text-xs text-gray-400 font-normal">(Meta: 7%)</span> <i class="fa-solid fa-arrow-down arrow-down"></i></span>
-                                </li>
-                                <li class="flex justify-between items-center pb-2 border-b">
-                                    <span>Encerramento:</span> 
-                                    <span class="font-bold text-right">619<br><span class="text-[10px] text-gray-400 font-normal">sendo 467 do ranking</span></span>
-                                </li>
-                            </ul>
-                            <div class="mt-4 bg-gray-50 p-3 rounded-lg text-xs space-y-1">
-                                <p><strong>Ranking Operacional:</strong> 3º Lugar (temos 3 prestadores)</p>
-                                <p><strong>Ranking Performance do mês:</strong> 2º lugar</p>
-                                <p><strong>Ranking geral (peracional + perfor):</strong> 3º lugar</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="bg-yellow-50 p-5 rounded-2xl border border-yellow-200 text-sm text-gray-800">
-                        <h4 class="font-bold mb-2">Obs:</h4>
-                        <ul class="list-none space-y-2">
-                            <li><strong>(i) Abril 2026:</strong> No ranking do mês, ficamos em 7º lugar operacional e 4º lugar performance;</li>
-                            <li><strong>(ii) No acumulado do ano de 2026:</strong> 7º lugar operacional e 4º lugar performance;</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- 3, 4, 5. OUTROS INDICADORES -->
-                <div class="grid md:grid-cols-3 gap-6">
-                    <!-- Qualidade e Risco -->
-                    <div class="bg-white p-6 rounded-2xl shadow-sm border-t-4 border-red-500">
-                        <h3 class="font-bold text-lg mb-4 text-gray-800">3. Qualidade e Risco <span class="text-xs font-normal text-gray-400 italic block mt-1">apurado apenas final do mês</span></h3>
-                        
-                        <div class="mb-4">
-                            <h4 class="text-xs font-bold uppercase text-gray-500 border-b pb-1 mb-2">Prejuízos Processuais / Operacionais</h4>
-                            <p class="text-sm"><span class="font-semibold text-gray-600">Qtd de Ocorrências:</span> </p>
-                            <p class="text-sm"><span class="font-semibold text-gray-600">Valor Total Impacto:</span> </p>
-                            <p class="text-sm"><span class="font-semibold text-gray-600">Principais Motivos:</span> </p>
-                            <p class="text-sm"><span class="font-semibold text-gray-600">Ações de Mitigação:</span> </p>
-                        </div>
-                        
-                        <div class="mb-4">
-                            <h4 class="text-xs font-bold uppercase text-gray-500 border-b pb-1 mb-2">Pagamentos Recebidos Em Atraso</h4>
-                            <p class="text-sm"><span class="font-semibold text-gray-600">Quantidade:</span> não tivemos</p>
-                        </div>
-                        
-                        <div>
-                            <h4 class="text-xs font-bold uppercase text-gray-500 border-b pb-1 mb-2">NPS</h4>
-                            <p class="text-sm"><span class="font-semibold text-gray-600">Nota da Equipe:</span> 1 nota 7 e 1 nota 8 (Meta: 10)</p>
-                            <p class="text-sm"><span class="font-semibold text-gray-600">Principais Motivos Detração:</span> indicadores operacionais e encerramento;</p>
-                        </div>
-                    </div>
-
-                    <!-- Gestão e Pessoas -->
-                    <div class="bg-white p-6 rounded-2xl shadow-sm border-t-4 border-purple-500">
-                        <h3 class="font-bold text-lg mb-4 text-gray-800">4. Gestão da Operação e Pessoas</h3>
-                        
-                        <div class="mb-6">
-                            <h4 class="text-xs font-bold uppercase text-gray-500 border-b pb-1 mb-2">Saídas</h4>
-                            <p class="text-sm"><span class="font-semibold text-gray-600">Quantidade:</span> 2 ( ARAA, DSSI, VEC e LBA)</p>
-                            <p class="text-sm mt-1 text-gray-700 italic">"Improdutividade e mudança de escritório"</p>
-                        </div>
-                        
-                        <div>
-                            <h4 class="text-xs font-bold uppercase text-gray-500 border-b pb-1 mb-2">Progressões</h4>
-                            <ul class="space-y-3">
-                                <li class="bg-purple-50 p-2 rounded text-sm">
-                                    <span class="block font-bold text-purple-900">Advogado: CLMR</span>
-                                    <span class="block text-purple-700">Nível: JR 4</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Projetos e Projeções -->
-                    <div class="bg-white p-6 rounded-2xl shadow-sm border-t-4 border-teal-500">
-                        <h3 class="font-bold text-lg mb-4 text-gray-800">5. Projetos e Projeções</h3>
-                        
-                        <div class="mb-6">
-                            <h4 class="text-xs font-bold uppercase text-gray-500 border-b pb-1 mb-2">Desenvolvimento do Cliente</h4>
-                            <div class="space-y-2 text-sm">
-                                <p><span class="font-semibold text-gray-600">Ideia/Iniciativa:</span><br>[descrever a ideia de melhoria]</p>
-                                <p><span class="font-semibold text-gray-600">Status:</span> [Não iniciado / Em andamento / Implementado]</p>
-                                <p><span class="font-semibold text-gray-600">Impacto Esperado:</span><br>[EX: Aumento de receita]</p>
-                            </div>
-                        </div>
-
-                        <div>
-                            <h4 class="text-xs font-bold uppercase text-gray-500 border-b pb-1 mb-2">Projeções Futuras (Próximo Mês)</h4>
-                            <p class="text-sm text-gray-700 italic">[Quais são as expectativas de resultado e as principais frentes de trabalho do coordenador para o próximo ciclo?]</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-    </main>
-
-    <footer class="bg-white border-t border-gray-100 py-8">
-        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-gray-400 text-xs">
-            <p>&copy; 2026 - Relatório RAR Coordenação - AESI</p>
-            <p class="mt-2 md:mt-0 font-bold">CONFIDENCIAL</p>
-        </div>
-    </footer>
-
-    <script>
-        function showSection(sectionId) {
-            // Esconde todas as seções
-            document.querySelectorAll('.content-section').forEach(section => {
-                section.classList.remove('active');
-            });
-            
-            // Mostra a seção desejada
-            const target = document.getElementById(sectionId);
-            if (target) {
-                target.classList.add('active');
-            }
-
-            // Atualiza os estilos das abas de navegação
-            document.querySelectorAll('.nav-btn').forEach(btn => {
-                btn.classList.remove('tab-active');
-            });
-            const activeBtn = document.getElementById('btn-' + sectionId);
-            if (activeBtn) {
-                activeBtn.classList.add('tab-active');
-            }
-
-            // Rola suavemente para o topo ao trocar de aba
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-    </script>
+ 
+<!-- Cabeçalho -->
+<header class="bg-[#003366] text-white sticky top-0 z-50 shadow-xl">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-20">
+<div class="flex-shrink-0 flex items-center gap-3">
+<i class="fa-solid fa-chart-line text-yellow-400 text-2xl"></i>
+<span class="font-poppins font-bold text-lg tracking-tight uppercase">DADOS RAR - COORDENAÇÃO - AESI</span>
+</div>
+<nav class="hidden md:flex space-x-6 h-full items-center text-xs font-semibold uppercase tracking-wider">
+<button onclick="showSection('marco')" class="nav-btn tab-active px-2 py-7 transition-all" id="btn-marco">Março 2026</button>
+<button onclick="showSection('abril')" class="nav-btn px-2 py-7 transition-all" id="btn-abril">Abril 2026</button>
+</nav>
+</div>
+</div>
+</header>
+ 
+<main class="flex-grow">
+ 
+<!-- SECÇÃO: MARÇO 2026 -->
+<section id="marco" class="content-section active">
+<div class="bg-[#004080] text-white py-16">
+<div class="max-w-7xl mx-auto px-4 text-center md:text-left">
+<h2 class="text-4xl font-bold mb-2">Coordenação - AESI - Março 2026</h2>
+<p class="text-blue-100 flex items-center justify-center md:justify-start gap-2 text-lg">
+<i class="fa-solid fa-user-tie"></i> Coordenador(a): Adriana Estevam
+</p>
+</div>
+</div>
+ 
+<div class="max-w-7xl mx-auto px-4 py-12 space-y-8">
+<!-- 1. DADOS GERAIS E RENTABILIDADE -->
+<div>
+<h3 class="text-2xl font-bold text-gray-800 mb-6 border-l-4 border-blue-600 pl-3">1. Dados Gerais e Rentabilidade</h3>
+ 
+<div class="grid md:grid-cols-2 gap-6 mb-6">
+<!-- Fevereiro -->
+<div class="bg-slate-100 p-6 rounded-2xl shadow-sm border border-slate-200">
+<h4 class="font-bold text-slate-700 text-lg mb-4">Fevereiro</h4>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<p class="text-gray-500 text-xs font-bold uppercase mb-1">Receita Bruta</p>
+<p class="text-xl font-bold text-gray-800">R$ 1,53 milhão</p>
+</div>
+<div>
+<p class="text-gray-500 text-xs font-bold uppercase mb-1">Receita Líquida</p>
+<p class="text-xl font-bold text-gray-800">R$ 1.303.137,55</p>
+</div>
+<div>
+<p class="text-gray-500 text-xs font-bold uppercase mb-1">Custo Operacional</p>
+<p class="text-xl font-bold text-red-600">R$ 315.103,81</p>
+</div>
+<div>
+<p class="text-gray-500 text-xs font-bold uppercase mb-1">Margem de Lucro</p>
+<p class="text-xl font-bold text-blue-600">76%</p>
+</div>
+</div>
+<div class="mt-4 pt-4 border-t border-slate-200">
+<p class="text-gray-500 text-xs font-bold uppercase mb-1">Resultado Final</p>
+<p class="text-lg font-bold text-green-600">R$ 988.033,74 [POSITIVO]</p>
+</div>
+</div>
+ 
+<!-- Março -->
+<div class="bg-white p-6 rounded-2xl shadow-sm border-b-4 border-blue-600 stat-card">
+<h4 class="font-bold text-blue-900 text-lg mb-4">Março</h4>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<p class="text-gray-400 text-xs font-bold uppercase mb-1">Receita Bruta</p>
+<p class="text-2xl font-bold text-gray-800">R$ 503.347,00</p>
+</div>
+<div>
+<p class="text-gray-400 text-xs font-bold uppercase mb-1">Receita Líquida</p>
+<p class="text-2xl font-bold text-gray-800">R$ 427.844,95</p>
+</div>
+<div>
+<p class="text-gray-400 text-xs font-bold uppercase mb-1">Custo Operacional</p>
+<p class="text-xl font-bold text-red-500">R$ 397.267,08</p>
+</div>
+<div>
+<p class="text-gray-400 text-xs font-bold uppercase mb-1">Margem de Lucro</p>
+<p class="text-xl font-bold text-blue-500">7%</p>
+</div>
+</div>
+<div class="mt-4 pt-4 border-t border-gray-100">
+<p class="text-gray-400 text-xs font-bold uppercase mb-1">Resultado Final</p>
+<p class="text-xl font-bold text-green-500">R$ 30.577,87 [POSITIVO]</p>
+</div>
+</div>
+</div>
+ 
+<!-- Análise -->
+<div class="bg-blue-50 p-6 rounded-2xl border-l-4 border-blue-400">
+<h4 class="font-bold text-blue-900 mb-2">Análise do Coordenador: Por que tivemos a variação na margem de lucro neste período? Quais foram os principais ofensores de custo ou impulsionadores de receita?</h4>
+<p class="text-sm text-gray-700 leading-relaxed text-justify">
+No mês de março, observamos uma redução na margem de lucro em comparação ao período anterior, principalmente em razão do aumento do custo operacional. Esse cenário está diretamente relacionado ao plano de ação implementado para reestruturação e melhoria da operação (prestador terceirizado e advogados internos fora da pauta de audiências).<br><br>
+Para os próximos meses, a expectativa é de reequilíbrio da margem de lucro, com a redução dos custos com correspondentes, decorrente do retorno dos advogados internos à pauta de audiências e do encerramento das contratações externas, somada ao aumento do faturamento e aos ajustes na estrutura da equipe, o que tende a promover maior eficiência operacional e uma melhor composição de resultados.
+</p>
+</div>
+</div>
+ 
+<!-- 2. METAS CLIENTE -->
+<div>
+<h3 class="text-2xl font-bold text-gray-800 mb-6 border-l-4 border-yellow-400 pl-3">2. Metas Cliente (Desempenho por Região)</h3>
+ 
+<div class="grid md:grid-cols-3 gap-6 mb-6">
+<!-- Nordeste -->
+<div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+<div class="bg-slate-800 text-white py-2 px-4 rounded-lg mb-4 text-center font-bold">NORDESTE</div>
+<ul class="space-y-3 text-sm text-gray-700">
+<li class="flex justify-between items-center pb-2 border-b">
+<span>Êxito:</span>
+<span class="font-bold">85% <span class="text-xs text-gray-400 font-normal">(Meta: 84%)</span> <i class="fa-solid fa-arrow-up arrow-up"></i></span>
+</li>
+<li class="flex justify-between items-center pb-2 border-b">
+<span>TKM:</span>
+<span class="font-bold">R$ 780,00 <span class="text-xs text-gray-400 font-normal">(Meta: R$ 975,00)</span> <i class="fa-solid fa-arrow-up arrow-up"></i></span>
+</li>
+<li class="flex justify-between items-center pb-2 border-b">
+<span>Acordo:</span>
+<span class="font-bold">1% <span class="text-xs text-gray-400 font-normal">(Meta: 7%)</span> <i class="fa-solid fa-arrow-down arrow-down"></i></span>
+</li>
+<li class="flex justify-between items-center pb-2 border-b">
+<span>Encerramento:</span>
+<span class="font-bold text-right">725<br><span class="text-[10px] text-gray-400 font-normal">sendo 488 do ranking</span></span>
+</li>
+</ul>
+<div class="mt-4 bg-gray-50 p-3 rounded-lg text-xs space-y-1">
+<p><strong>Ranking Operacional do mês:</strong> 2º Lugar (só existem 2 escritórios)</p>
+<p><strong>Ranking Performance do mês:</strong> 1º lugar</p>
+<p><strong>Ranking geral (peracional + perfor):</strong> 1º lugar</p>
+</div>
+</div>
+ 
+<!-- Norte -->
+<div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+<div class="bg-slate-800 text-white py-2 px-4 rounded-lg mb-4 text-center font-bold">NORTE</div>
+<ul class="space-y-3 text-sm text-gray-700">
+<li class="flex justify-between items-center pb-2 border-b">
+<span>Êxito:</span>
+<span class="font-bold">90% <span class="text-xs text-gray-400 font-normal">(Meta: 92%)</span> <i class="fa-solid fa-arrow-down arrow-down"></i></span>
+</li>
+<li class="flex justify-between items-center pb-2 border-b">
+<span>TKM:</span>
+<span class="font-bold">R$ 343,00 <span class="text-xs text-gray-400 font-normal">(Meta: R$ 377,00)</span> [<i class="fa-solid fa-arrow-up arrow-up"></i>]</span>
+</li>
+<li class="flex justify-between items-center pb-2 border-b">
+<span>Acordo:</span>
+<span class="font-bold">0% <span class="text-xs text-gray-400 font-normal">(Meta: 6%)</span> [<i class="fa-solid fa-arrow-down arrow-down"></i>]</span>
+</li>
+<li class="flex justify-between items-center pb-2 border-b">
+<span>Encerramento:</span>
+<span class="font-bold text-right">123<br><span class="text-[10px] text-gray-400 font-normal">sendo 92 do ranking</span></span>
+</li>
+</ul>
+<div class="mt-4 bg-gray-50 p-3 rounded-lg text-xs space-y-1">
+<p><strong>Ranking Operacional:</strong> 3º Lugar (temos 3 prestadores)</p>
+<p><strong>Ranking Performance do mês:</strong> 1º lugar</p>
+<p><strong>Ranking geral (operacional + perfor):</strong> 1º lugar</p>
+</div>
+</div>
+ 
+<!-- Sudeste -->
+<div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+<div class="bg-slate-800 text-white py-2 px-4 rounded-lg mb-4 text-center font-bold">SUDESTE</div>
+<ul class="space-y-3 text-sm text-gray-700">
+<li class="flex justify-between items-center pb-2 border-b">
+<span>Êxito:</span>
+<span class="font-bold">82% <span class="text-xs text-gray-400 font-normal">(Meta: 83%)</span> <i class="fa-solid fa-arrow-down arrow-down"></i></span>
+</li>
+<li class="flex justify-between items-center pb-2 border-b">
+<span>TKM:</span>
+<span class="font-bold">R$494,00 <span class="text-xs text-gray-400 font-normal">(Meta: R$ 1065,00)</span> <i class="fa-solid fa-arrow-up arrow-up"></i></span>
+</li>
+<li class="flex justify-between items-center pb-2 border-b">
+<span>Acordo:</span>
+<span class="font-bold">0% <span class="text-xs text-gray-400 font-normal">(Meta: 7%)</span> <i class="fa-solid fa-arrow-down arrow-down"></i></span>
+</li>
+<li class="flex justify-between items-center pb-2 border-b">
+<span>Encerramento:</span>
+<span class="font-bold text-right">272<br><span class="text-[10px] text-gray-400 font-normal">sendo 206 do ranking</span></span>
+</li>
+</ul>
+<div class="mt-4 bg-gray-50 p-3 rounded-lg text-xs space-y-1">
+<p><strong>Ranking Operacional:</strong> 3º Lugar (temos 3 prestadores)</p>
+<p><strong>Ranking Performance do mês:</strong> 1º lugar</p>
+<p><strong>Ranking geral (peracional + perfor):</strong> 1º lugar</p>
+</div>
+</div>
+</div>
+ 
+<div class="bg-yellow-50 p-5 rounded-2xl border border-yellow-200 text-sm text-gray-800">
+<h4 class="font-bold mb-2">Obs:</h4>
+<ul class="list-none space-y-2">
+<li><strong>(i) Março 2026:</strong> No ranking do mês, ficamos em 4º lugar operacional e 1º lugar performance;</li>
+<li><strong>(ii) No acumulado do ano de 2026:</strong> 5º lugar operacional e 5º lugar performance;</li>
+<li class="text-justify mt-2"><strong>(iii) Plano de ação:</strong> considerando a reação mais imediata que conseguimos apresentar no mês de março, em relação aos indicadores de performance, o plano de ação está focado na melhoria dos indicadores operacionais, especialmente nos pilares de cadastro e pagamentos, por meio do alinhamento com o cliente para compreensão dos alertas de cadastro e eliminação de backlog junto à CJ. Em paralelo, foi implementada a checagem diária de 100% dos pareceres no Kanban, garantindo tratativa tempestiva e correta dos casos, com impacto direto na redução de atrasos e melhoria da relação com o cliente. Como medida complementar, será designado um advogado responsável pelo direcionamento estratégico dos pareceres (recurso ou pagamento), trazendo mais agilidade ao fluxo pós-sentença e maior controle dos indicadores.</li>
+</ul>
+</div>
+ 
+<!-- INDICADORES OPERACIONAIS (Inserido conforme solicitação) -->
+<div class="mt-8">
+<h3 class="text-xl font-bold text-gray-800 mb-4 border-l-4 border-indigo-500 pl-3">Indicadores Operacionais</h3>
+<div class="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
+<div class="overflow-x-auto">
+<table class="w-full text-xs text-left">
+<thead class="bg-slate-50 text-gray-600 font-bold border-b border-gray-200">
+<tr>
+<th class="px-3 py-3">Process Stage</th>
+<th class="px-3 py-3">ID KPI</th>
+<th class="px-2 py-3 text-center">Value</th>
+<th class="px-2 py-3 text-center">Target</th>
+<th class="px-2 py-3 text-center">Score</th>
+<th class="px-2 py-3 text-center">Score Band</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-gray-100">
+<tr class="hover:bg-gray-50">
+<td class="px-3 py-2 font-medium text-gray-800 align-top">intake (entrada / cadastro)</td>
+<td class="px-3 py-2 text-gray-600 align-top">judicial_secrecy_lawsuit_acceptance (aceite de ação sob segredo de justiça)</td>
+<td class="px-2 py-2 text-center align-top">96.7%</td>
+<td class="px-2 py-2 text-center align-top">100.0%</td>
+<td class="px-2 py-2 text-center font-medium align-top">750</td>
+<td class="px-2 py-2 text-center align-top"><span class="inline-block w-4 h-4 rounded-full bg-green-500 shadow-sm" title="Green"></span></td>
+</tr>
+<tr class="hover:bg-gray-50">
+<td class="px-3 py-2 font-medium text-gray-800 align-top">intake (entrada / cadastro)</td>
+<td class="px-3 py-2 text-gray-600 align-top">lawsuit_acceptance (aceite da ação)</td>
+<td class="px-2 py-2 text-center align-top">38.0%</td>
+<td class="px-2 py-2 text-center align-top">95.0%</td>
+<td class="px-2 py-2 text-center font-medium align-top">0</td>
+<td class="px-2 py-2 text-center align-top"><span class="inline-block w-4 h-4 rounded-full bg-orange-500 shadow-sm" title="Orange"></span></td>
+</tr>
+<tr class="hover:bg-gray-50">
+<td class="px-3 py-2 font-medium text-gray-800 align-top">payment (pagamento)</td>
+<td class="px-3 py-2 text-gray-600 align-top">refused_payment (pagamento recusado)</td>
+<td class="px-2 py-2 text-center align-top">46.0%</td>
+<td class="px-2 py-2 text-center align-top">95.0%</td>
+<td class="px-2 py-2 text-center font-medium align-top">0</td>
+<td class="px-2 py-2 text-center align-top"><span class="inline-block w-4 h-4 rounded-full bg-orange-500 shadow-sm" title="Orange"></span></td>
+</tr>
+<tr class="hover:bg-gray-50">
+<td class="px-3 py-2 font-medium text-gray-800 align-top">payment (pagamento)</td>
+<td class="px-3 py-2 text-gray-600 align-top">reopening_payment (reabertura de pagamento)</td>
+<td class="px-2 py-2 text-center align-top">48.4%</td>
+<td class="px-2 py-2 text-center align-top">95.0%</td>
+<td class="px-2 py-2 text-center font-medium align-top">0</td>
+<td class="px-2 py-2 text-center align-top"><span class="inline-block w-4 h-4 rounded-full bg-orange-500 shadow-sm" title="Orange"></span></td>
+</tr>
+<tr class="hover:bg-gray-50">
+<td class="px-3 py-2 font-medium text-gray-800 align-top">settlement (acordo)</td>
+<td class="px-3 py-2 text-gray-600 align-top">post_settlement_status (status pós-acordo)</td>
+<td class="px-2 py-2 text-center align-top">100.0%</td>
+<td class="px-2 py-2 text-center align-top">100.0%</td>
+<td class="px-2 py-2 text-center font-medium text-purple-600 align-top">1000</td>
+<td class="px-2 py-2 text-center align-top"><span class="inline-block w-4 h-4 rounded-full bg-purple-600 shadow-sm" title="Purple"></span></td>
+</tr>
+<tr class="hover:bg-gray-50">
+<td class="px-3 py-2 font-medium text-gray-800 align-top">settlement (acordo)</td>
+<td class="px-3 py-2 text-gray-600 align-top">settlement_negotiation (negociação de acordo)</td>
+<td class="px-2 py-2 text-center align-top">0.0%</td>
+<td class="px-2 py-2 text-center align-top">95.0%</td>
+<td class="px-2 py-2 text-center font-medium align-top">0</td>
+<td class="px-2 py-2 text-center align-top"><span class="inline-block w-4 h-4 rounded-full bg-orange-500 shadow-sm" title="Orange"></span></td>
+</tr>
+<tr class="hover:bg-gray-50">
+<td class="px-3 py-2 font-medium text-gray-800 align-top">strategy (estratégia)</td>
+<td class="px-3 py-2 text-gray-600 align-top">external_lawfirm_strategy (estratégia do escritório externo)</td>
+<td class="px-2 py-2 text-center align-top">71.7%</td>
+<td class="px-2 py-2 text-center align-top">95.0%</td>
+<td class="px-2 py-2 text-center font-medium align-top">0</td>
+<td class="px-2 py-2 text-center align-top"><span class="inline-block w-4 h-4 rounded-full bg-orange-500 shadow-sm" title="Orange"></span></td>
+</tr>
+</tbody>
+<tfoot class="bg-slate-100 font-bold text-gray-800 border-t-2 border-gray-200">
+<tr>
+<td class="px-3 py-3 uppercase" colspan="2">Total</td>
+<td class="px-2 py-3 text-center">57.3%</td>
+<td class="px-2 py-3 text-center">96.4%</td>
+<td class="px-2 py-3 text-center text-blue-700">250</td>
+<td class="px-2 py-3 text-center"></td>
+</tr>
+</tfoot>
+</table>
+</div>
+<div class="bg-indigo-50 p-5 border-t border-indigo-100 flex flex-col sm:flex-row justify-around items-center text-indigo-900 font-bold gap-2">
+<div class="flex items-center gap-2"><i class="fa-solid fa-trophy text-yellow-500"></i> Ranking operacional: <span class="text-xl">4º lugar</span></div>
+<div class="flex items-center gap-2"><i class="fa-solid fa-star text-indigo-500"></i> Score operacional: <span class="text-xl">219</span></div>
+</div>
+</div>
+</div>
+</div>
+ 
+<!-- 3, 4, 5. OUTROS INDICADORES -->
+<div class="grid md:grid-cols-3 gap-6">
+<!-- Qualidade e Risco -->
+<div class="bg-white p-6 rounded-2xl shadow-sm border-t-4 border-red-500">
+<h3 class="font-bold text-lg mb-4 text-gray-800">3. Qualidade e Risco</h3>
+ 
+<div class="mb-4">
+<h4 class="text-xs font-bold uppercase text-gray-500 border-b pb-1 mb-2">Prejuízos Processuais / Operacionais</h4>
+<p class="text-sm"><span class="font-semibold text-gray-600">Qtd de Ocorrências:</span> 1</p>
+<p class="text-sm"><span class="font-semibold text-gray-600">Valor Total Impacto:</span> R$ 72,56</p>
+<p class="text-sm"><span class="font-semibold text-gray-600">Principais Motivos:</span> valor remanescente custas finais</p>
+</div>
+ 
+<div class="mb-4">
+<h4 class="text-xs font-bold uppercase text-gray-500 border-b pb-1 mb-2">Pagamentos Recebidos Em Atraso</h4>
+<p class="text-sm"><span class="font-semibold text-gray-600">Quantidade:</span> não tivemos</p>
+</div>
+ 
+<div>
+<h4 class="text-xs font-bold uppercase text-gray-500 border-b pb-1 mb-2">NPS</h4>
+<p class="text-sm"><span class="font-semibold text-gray-600">Nota da Equipe:</span> 1 nota 7 e 1 nota 8 (Meta: 10)</p>
+<p class="text-sm"><span class="font-semibold text-gray-600">Principais Motivos Detração:</span> indicadores operacionais e encerramento;</p>
+</div>
+</div>
+ 
+<!-- Gestão e Pessoas -->
+<div class="bg-white p-6 rounded-2xl shadow-sm border-t-4 border-purple-500">
+<h3 class="font-bold text-lg mb-4 text-gray-800">4. Gestão da Operação e Pessoas</h3>
+ 
+<div class="mb-6">
+<h4 class="text-xs font-bold uppercase text-gray-500 border-b pb-1 mb-2">Saídas</h4>
+<p class="text-sm"><span class="font-semibold text-gray-600">Quantidade:</span> 2 ( TSSO, BBR e LMP )</p>
+<p class="text-sm mt-1 text-gray-700 italic">"Mudança de área de atuação e aprovação em concurso."</p>
+</div>
+ 
+<div>
+<h4 class="text-xs font-bold uppercase text-gray-500 border-b pb-1 mb-2">Progressões</h4>
+<ul class="space-y-3">
+<li class="bg-purple-50 p-2 rounded text-sm">
+<span class="block font-bold text-purple-900">Advogado: MMF</span>
+<span class="block text-purple-700">Nível: JR 3</span>
+</li>
+<li class="bg-purple-50 p-2 rounded text-sm">
+<span class="block font-bold text-purple-900">Advogado: WVS</span>
+<span class="block text-purple-700">Nível: JR 2</span>
+</li>
+</ul>
+</div>
+</div>
+ 
+<!-- Projetos e Projeções -->
+<div class="bg-white p-6 rounded-2xl shadow-sm border-t-4 border-teal-500">
+<h3 class="font-bold text-lg mb-4 text-gray-800">5. Projetos e Projeções</h3>
+ 
+<div>
+<h4 class="text-xs font-bold uppercase text-gray-500 border-b pb-1 mb-2">Desenvolvimento do Cliente</h4>
+<div class="space-y-2 text-sm">
+<p><span class="font-semibold text-gray-600">Ideia/Iniciativa:</span><br>Projeto litigância abusiva (TJBA e TJSP)</p>
+<p><span class="font-semibold text-gray-600">Status:</span> Iniciado</p>
+<p class="text-justify"><span class="font-semibold text-gray-600">Impacto Esperado:</span><br>O projeto tem como objetivo mitigar o impacto financeiro e operacional decorrente de demandas com indícios de litigância abusiva, por meio de atuação coordenada nas esferas cível e administrativa.</p>
+</div>
+</div>
+</div>
+</div>
+ 
+</div>
+</section>
+ 
+<!-- SECÇÃO: ABRIL 2026 -->
+<section id="abril" class="content-section">
+<div class="bg-[#004080] text-white py-16">
+<div class="max-w-7xl mx-auto px-4 text-center md:text-left">
+<h2 class="text-4xl font-bold mb-2">Coordenação - AESI - Abril 2026</h2>
+<p class="text-blue-100 flex items-center justify-center md:justify-start gap-2 text-lg">
+<i class="fa-solid fa-user-tie"></i> Coordenador(a): Adriana Estevam
+</p>
+</div>
+</div>
+ 
+<div class="max-w-7xl mx-auto px-4 py-12 space-y-8">
+<!-- 1. DADOS GERAIS E RENTABILIDADE -->
+<div>
+<h3 class="text-2xl font-bold text-gray-800 mb-6 border-l-4 border-blue-600 pl-3">1. Dados Gerais e Rentabilidade <span class="text-sm font-normal text-gray-500 italic">- o dados do mês de abril serão apurados apenas final do mês</span></h3>
+ 
+<div class="grid md:grid-cols-3 gap-6 mb-6">
+<!-- Fevereiro -->
+<div class="bg-slate-100 p-6 rounded-2xl shadow-sm border border-slate-200 opacity-80">
+<h4 class="font-bold text-slate-700 text-lg mb-4">Fevereiro</h4>
+<div class="space-y-2 text-sm">
+<div class="flex justify-between"><span>Rec. Bruta:</span> <span class="font-bold">R$ 1,53 milhão</span></div>
+<div class="flex justify-between"><span>Rec. Líquida:</span> <span class="font-bold">R$ 1.303.137,55</span></div>
+<div class="flex justify-between"><span>Custo Oper.:</span> <span class="font-bold text-red-600">R$ 315.103,81</span></div>
+<div class="flex justify-between"><span>Result. Final:</span> <span class="font-bold text-green-600">R$ 988.033,74 [POSITIVO]</span></div>
+<div class="flex justify-between"><span>Margem:</span> <span class="font-bold text-blue-600">76%</span></div>
+</div>
+</div>
+ 
+<!-- Março -->
+<div class="bg-slate-100 p-6 rounded-2xl shadow-sm border border-slate-200 opacity-80">
+<h4 class="font-bold text-slate-700 text-lg mb-4">Março</h4>
+<div class="space-y-2 text-sm">
+<div class="flex justify-between"><span>Rec. Bruta:</span> <span class="font-bold">R$ 503.347,00</span></div>
+<div class="flex justify-between"><span>Rec. Líquida:</span> <span class="font-bold">R$ 427.844,95</span></div>
+<div class="flex justify-between"><span>Custo Oper.:</span> <span class="font-bold text-red-600">R$ 397.267,08</span></div>
+<div class="flex justify-between"><span>Result. Final:</span> <span class="font-bold text-green-600">R$ 30.577,87 [POSITIVO]</span></div>
+<div class="flex justify-between"><span>Margem:</span> <span class="font-bold text-blue-600">7%</span></div>
+</div>
+</div>
+ 
+<!-- Abril -->
+<div class="bg-white p-6 rounded-2xl shadow-sm border-b-4 border-blue-600 stat-card">
+<h4 class="font-bold text-blue-900 text-lg mb-4">Abril</h4>
+<div class="space-y-3 text-sm">
+<div class="flex justify-between items-center border-b pb-1">
+<span class="text-gray-500 uppercase font-bold text-xs">Receita Bruta</span>
+<span class="font-bold text-gray-800">R$ [Valor]</span>
+</div>
+<div class="flex justify-between items-center border-b pb-1">
+<span class="text-gray-500 uppercase font-bold text-xs">Receita Líquida</span>
+<span class="font-bold text-gray-800">R$ [Valor]</span>
+</div>
+<div class="flex justify-between items-center border-b pb-1">
+<span class="text-gray-500 uppercase font-bold text-xs">Custo Operacional</span>
+<span class="font-bold text-gray-800">R$ [Valor]</span>
+</div>
+<div class="flex justify-between items-center border-b pb-1">
+<span class="text-gray-500 uppercase font-bold text-xs">Resultado Final</span>
+<span class="font-bold text-gray-800">R$ [Valor] [POSITIVO/NEGATIVO]</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-gray-500 uppercase font-bold text-xs">Margem de Lucro</span>
+<span class="font-bold text-blue-600 text-lg">[XX]%</span>
+</div>
+</div>
+</div>
+</div>
+ 
+<!-- Análise -->
+<div class="bg-blue-50 p-6 rounded-2xl border-l-4 border-blue-400">
+<h4 class="font-bold text-blue-900 mb-2">Análise do Coordenador: Por que tivemos a variação na margem de lucro neste período? Quais foram os principais ofensores de custo ou impulsionadores de receita?</h4>
+</div>
+</div>
+ 
+<!-- 2. METAS CLIENTE -->
+<div>
+<h3 class="text-2xl font-bold text-gray-800 mb-6 border-l-4 border-yellow-400 pl-3">2. Metas Cliente (Desempenho por Região)</h3>
+ 
+<div class="grid md:grid-cols-3 gap-6 mb-6">
+<!-- Nordeste -->
+<div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+<div class="bg-slate-800 text-white py-2 px-4 rounded-lg mb-4 text-center font-bold">NORDESTE</div>
+<ul class="space-y-3 text-sm text-gray-700">
+<li class="flex justify-between items-center pb-2 border-b">
+<span>Êxito:</span>
+<span class="font-bold">84% <span class="text-xs text-gray-400 font-normal">(Meta: 85%)</span> <i class="fa-solid fa-arrow-down arrow-down"></i></span>
+</li>
+<li class="flex justify-between items-center pb-2 border-b">
+<span>TKM:</span>
+<span class="font-bold">R$ 664,00 <span class="text-xs text-gray-400 font-normal">(Meta: R$ 977,00)</span> <i class="fa-solid fa-arrow-up arrow-up"></i></span>
+</li>
+<li class="flex justify-between items-center pb-2 border-b">
+<span>Acordo:</span>
+<span class="font-bold">0% <span class="text-xs text-gray-400 font-normal">(Meta: 7%)</span> <i class="fa-solid fa-arrow-down arrow-down"></i></span>
+</li>
+<li class="flex justify-between items-center pb-2 border-b">
+<span>Encerramento:</span>
+<span class="font-bold text-right">838<br><span class="text-[10px] text-gray-400 font-normal">sendo 432 do ranking</span></span>
+</li>
+</ul>
+<div class="mt-4 bg-gray-50 p-3 rounded-lg text-xs space-y-1">
+<p><strong>Ranking Operacional do mês:</strong> 3º Lugar</p>
+<p><strong>Ranking Performance do mês:</strong> 2º lugar</p>
+<p><strong>Ranking geral (operacional + perfor):</strong> 2º lugar</p>
+</div>
+</div>
+ 
+<!-- Norte -->
+<div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+<div class="bg-slate-800 text-white py-2 px-4 rounded-lg mb-4 text-center font-bold">NORTE</div>
+<ul class="space-y-3 text-sm text-gray-700">
+<li class="flex justify-between items-center pb-2 border-b">
+<span>Êxito:</span>
+<span class="font-bold">92% <span class="text-xs text-gray-400 font-normal">(Meta: 93%)</span> <i class="fa-solid fa-arrow-down arrow-down"></i></span>
+</li>
+<li class="flex justify-between items-center pb-2 border-b">
+<span>TKM:</span>
+<span class="font-bold">R$ 416,00 <span class="text-xs text-gray-400 font-normal">(Meta: R$ 385,00)</span> <i class="fa-solid fa-arrow-down arrow-down"></i></span>
+</li>
+<li class="flex justify-between items-center pb-2 border-b">
+<span>Acordo:</span>
+<span class="font-bold">0% <span class="text-xs text-gray-400 font-normal">(Meta: 6%)</span> <i class="fa-solid fa-arrow-down arrow-down"></i></span>
+</li>
+<li class="flex justify-between items-center pb-2 border-b">
+<span>Encerramento:</span>
+<span class="font-bold text-right">195<br><span class="text-[10px] text-gray-400 font-normal">sendo 98 do ranking</span></span>
+</li>
+</ul>
+<div class="mt-4 bg-gray-50 p-3 rounded-lg text-xs space-y-1">
+<p><strong>Ranking Operacional:</strong> 3º Lugar (temos 3 prestadores)</p>
+<p><strong>Ranking Performance do mês:</strong> 2º lugar</p>
+<p><strong>Ranking geral (operacional + perfor):</strong> 2º lugar</p>
+</div>
+</div>
+ 
+<!-- Sudeste -->
+<div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+<div class="bg-slate-800 text-white py-2 px-4 rounded-lg mb-4 text-center font-bold">SUDESTE</div>
+<ul class="space-y-3 text-sm text-gray-700">
+<li class="flex justify-between items-center pb-2 border-b">
+<span>Êxito:</span>
+<span class="font-bold">82% <span class="text-xs text-gray-400 font-normal">(Meta: 80%)</span> <i class="fa-solid fa-arrow-up arrow-up"></i></span>
+</li>
+<li class="flex justify-between items-center pb-2 border-b">
+<span>TKM:</span>
+<span class="font-bold">R$ 721,00 <span class="text-xs text-gray-400 font-normal">(Meta: R$ 1066,00)</span> <i class="fa-solid fa-arrow-up arrow-up"></i></span>
+</li>
+<li class="flex justify-between items-center pb-2 border-b">
+<span>Acordo:</span>
+<span class="font-bold">0% <span class="text-xs text-gray-400 font-normal">(Meta: 7%)</span> <i class="fa-solid fa-arrow-down arrow-down"></i></span>
+</li>
+<li class="flex justify-between items-center pb-2 border-b">
+<span>Encerramento:</span>
+<span class="font-bold text-right">619<br><span class="text-[10px] text-gray-400 font-normal">sendo 467 do ranking</span></span>
+</li>
+</ul>
+<div class="mt-4 bg-gray-50 p-3 rounded-lg text-xs space-y-1">
+<p><strong>Ranking Operacional:</strong> 3º Lugar (temos 3 prestadores)</p>
+<p><strong>Ranking Performance do mês:</strong> 2º lugar</p>
+<p><strong>Ranking geral (peracional + perfor):</strong> 3º lugar</p>
+</div>
+</div>
+</div>
+ 
+<div class="bg-yellow-50 p-5 rounded-2xl border border-yellow-200 text-sm text-gray-800">
+<h4 class="font-bold mb-2">Obs:</h4>
+<ul class="list-none space-y-2">
+<li><strong>(i) Abril 2026:</strong> No ranking do mês, ficamos em 7º lugar operacional e 4º lugar performance;</li>
+<li><strong>(ii) No acumulado do ano de 2026:</strong> 7º lugar operacional e 4º lugar performance;</li>
+</ul>
+</div>
+ 
+<!-- INDICADORES OPERACIONAIS ABRIL (Inserido conforme solicitação) -->
+<div class="mt-8">
+<h3 class="text-xl font-bold text-gray-800 mb-4 border-l-4 border-indigo-500 pl-3">Indicadores Operacionais</h3>
+<div class="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
+<div class="overflow-x-auto">
+<table class="w-full text-xs text-left">
+<thead class="bg-slate-50 text-gray-600 font-bold border-b border-gray-200">
+<tr>
+<th class="px-3 py-3">Process Stage</th>
+<th class="px-3 py-3">ID KPI</th>
+<th class="px-2 py-3 text-center">Value</th>
+<th class="px-2 py-3 text-center">Target</th>
+<th class="px-2 py-3 text-center">Score</th>
+<th class="px-2 py-3 text-center">Score Band</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-gray-100">
+<tr class="hover:bg-gray-50">
+<td class="px-3 py-2 font-medium text-gray-800 align-top">intake (entrada / cadastro)</td>
+<td class="px-3 py-2 text-gray-600 align-top">judicial_secrecy_lawsuit_acceptance (aceite de ação sob segredo de justiça)</td>
+<td class="px-2 py-2 text-center align-top">97.1%</td>
+<td class="px-2 py-2 text-center align-top">100.0%</td>
+<td class="px-2 py-2 text-center font-medium align-top">750</td>
+<td class="px-2 py-2 text-center align-top"><span class="inline-block w-4 h-4 rounded-full bg-green-500 shadow-sm" title="Green"></span></td>
+</tr>
+<tr class="hover:bg-gray-50">
+<td class="px-3 py-2 font-medium text-gray-800 align-top">intake (entrada / cadastro)</td>
+<td class="px-3 py-2 text-gray-600 align-top">lawsuit_acceptance (aceite da ação)</td>
+<td class="px-2 py-2 text-center align-top">10.4%</td>
+<td class="px-2 py-2 text-center align-top">95.0%</td>
+<td class="px-2 py-2 text-center font-medium align-top">0</td>
+<td class="px-2 py-2 text-center align-top"><span class="inline-block w-4 h-4 rounded-full bg-orange-500 shadow-sm" title="Orange"></span></td>
+</tr>
+<tr class="hover:bg-gray-50">
+<td class="px-3 py-2 font-medium text-gray-800 align-top">payment (pagamento)</td>
+<td class="px-3 py-2 text-gray-600 align-top">refused_payment (pagamento recusado)</td>
+<td class="px-2 py-2 text-center align-top">42.4%</td>
+<td class="px-2 py-2 text-center align-top">95.0%</td>
+<td class="px-2 py-2 text-center font-medium align-top">0</td>
+<td class="px-2 py-2 text-center align-top"><span class="inline-block w-4 h-4 rounded-full bg-orange-500 shadow-sm" title="Orange"></span></td>
+</tr>
+<tr class="hover:bg-gray-50">
+<td class="px-3 py-2 font-medium text-gray-800 align-top">payment (pagamento)</td>
+<td class="px-3 py-2 text-gray-600 align-top">reopening_payment (reabertura de pagamento)</td>
+<td class="px-2 py-2 text-center align-top">40.2%</td>
+<td class="px-2 py-2 text-center align-top">95.0%</td>
+<td class="px-2 py-2 text-center font-medium align-top">0</td>
+<td class="px-2 py-2 text-center align-top"><span class="inline-block w-4 h-4 rounded-full bg-orange-500 shadow-sm" title="Orange"></span></td>
+</tr>
+<tr class="hover:bg-gray-50">
+<td class="px-3 py-2 font-medium text-gray-800 align-top">settlement (acordo)</td>
+<td class="px-3 py-2 text-gray-600 align-top">post_settlement_status (status pós-acordo)</td>
+<td class="px-2 py-2 text-center align-top">63.5%</td>
+<td class="px-2 py-2 text-center align-top">95.0%</td>
+<td class="px-2 py-2 text-center font-medium align-top">0</td>
+<td class="px-2 py-2 text-center align-top"><span class="inline-block w-4 h-4 rounded-full bg-orange-500 shadow-sm" title="Orange"></span></td>
+</tr>
+<tr class="hover:bg-gray-50">
+<td class="px-3 py-2 font-medium text-gray-800 align-top">settlement (acordo)</td>
+<td class="px-3 py-2 text-gray-600 align-top">settlement_negotiation (negociação de acordo)</td>
+<td class="px-2 py-2 text-center align-top">10.1%</td>
+<td class="px-2 py-2 text-center align-top">95.0%</td>
+<td class="px-2 py-2 text-center font-medium align-top">0</td>
+<td class="px-2 py-2 text-center align-top"><span class="inline-block w-4 h-4 rounded-full bg-orange-500 shadow-sm" title="Orange"></span></td>
+</tr>
+<tr class="hover:bg-gray-50">
+<td class="px-3 py-2 font-medium text-gray-800 align-top">strategy (estratégia)</td>
+<td class="px-3 py-2 text-gray-600 align-top">external_lawfirm_strategy (estratégia do escritório externo)</td>
+<td class="px-2 py-2 text-center align-top">47.3%</td>
+<td class="px-2 py-2 text-center align-top">95.0%</td>
+<td class="px-2 py-2 text-center font-medium align-top">0</td>
+<td class="px-2 py-2 text-center align-top"><span class="inline-block w-4 h-4 rounded-full bg-orange-500 shadow-sm" title="Orange"></span></td>
+</tr>
+</tbody>
+<tfoot class="bg-slate-100 font-bold text-gray-800 border-t-2 border-gray-200">
+<tr>
+<td class="px-3 py-3 uppercase" colspan="2">Total</td>
+<td class="px-2 py-3 text-center">44.4%</td>
+<td class="px-2 py-3 text-center">95.7%</td>
+<td class="px-2 py-3 text-center text-blue-700">107,14</td>
+<td class="px-2 py-3 text-center"></td>
+</tr>
+</tfoot>
+</table>
+</div>
+<div class="bg-indigo-50 p-5 border-t border-indigo-100 flex flex-col sm:flex-row justify-around items-center text-indigo-900 font-bold gap-2">
+<div class="flex items-center gap-2"><i class="fa-solid fa-trophy text-yellow-500"></i> Ranking operacional: <span class="text-xl">7º lugar</span></div>
+<div class="flex items-center gap-2"><i class="fa-solid fa-star text-indigo-500"></i> Score operacional: <span class="text-xl">94</span></div>
+</div>
+</div>
+</div>
+</div>
+ 
+<!-- 3, 4, 5. OUTROS INDICADORES -->
+<div class="grid md:grid-cols-3 gap-6">
+<!-- Qualidade e Risco -->
+<div class="bg-white p-6 rounded-2xl shadow-sm border-t-4 border-red-500">
+<h3 class="font-bold text-lg mb-4 text-gray-800">3. Qualidade e Risco <span class="text-xs font-normal text-gray-400 italic block mt-1">apurado apenas final do mês</span></h3>
+ 
+<div class="mb-4">
+<h4 class="text-xs font-bold uppercase text-gray-500 border-b pb-1 mb-2">Prejuízos Processuais / Operacionais</h4>
+<p class="text-sm"><span class="font-semibold text-gray-600">Qtd de Ocorrências:</span> </p>
+<p class="text-sm"><span class="font-semibold text-gray-600">Valor Total Impacto:</span> </p>
+<p class="text-sm"><span class="font-semibold text-gray-600">Principais Motivos:</span> </p>
+<p class="text-sm"><span class="font-semibold text-gray-600">Ações de Mitigação:</span> </p>
+</div>
+ 
+<div class="mb-4">
+<h4 class="text-xs font-bold uppercase text-gray-500 border-b pb-1 mb-2">Pagamentos Recebidos Em Atraso</h4>
+<p class="text-sm"><span class="font-semibold text-gray-600">Quantidade:</span> não tivemos</p>
+</div>
+ 
+<div>
+<h4 class="text-xs font-bold uppercase text-gray-500 border-b pb-1 mb-2">NPS</h4>
+<p class="text-sm"><span class="font-semibold text-gray-600">Nota da Equipe:</span> 1 nota 7 e 1 nota 8 (Meta: 10)</p>
+<p class="text-sm"><span class="font-semibold text-gray-600">Principais Motivos Detração:</span> indicadores operacionais e encerramento;</p>
+</div>
+</div>
+ 
+<!-- Gestão e Pessoas -->
+<div class="bg-white p-6 rounded-2xl shadow-sm border-t-4 border-purple-500">
+<h3 class="font-bold text-lg mb-4 text-gray-800">4. Gestão da Operação e Pessoas</h3>
+ 
+<div class="mb-6">
+<h4 class="text-xs font-bold uppercase text-gray-500 border-b pb-1 mb-2">Saídas</h4>
+<p class="text-sm"><span class="font-semibold text-gray-600">Quantidade:</span> 2 ( ARAA, DSSI, VEC e LBA)</p>
+<p class="text-sm mt-1 text-gray-700 italic">"Improdutividade e mudança de escritório"</p>
+</div>
+ 
+<div>
+<h4 class="text-xs font-bold uppercase text-gray-500 border-b pb-1 mb-2">Progressões</h4>
+<ul class="space-y-3">
+<li class="bg-purple-50 p-2 rounded text-sm">
+<span class="block font-bold text-purple-900">Advogado: CLMR</span>
+<span class="block text-purple-700">Nível: JR 4</span>
+</li>
+</ul>
+</div>
+</div>
+ 
+<!-- Projetos e Projeções -->
+<div class="bg-white p-6 rounded-2xl shadow-sm border-t-4 border-teal-500">
+<h3 class="font-bold text-lg mb-4 text-gray-800">5. Projetos e Projeções</h3>
+ 
+<div class="mb-6">
+<h4 class="text-xs font-bold uppercase text-gray-500 border-b pb-1 mb-2">Desenvolvimento do Cliente</h4>
+<div class="space-y-2 text-sm">
+<p><span class="font-semibold text-gray-600">Ideia/Iniciativa:</span><br>[descrever a ideia de melhoria]</p>
+<p><span class="font-semibold text-gray-600">Status:</span> [Não iniciado / Em andamento / Implementado]</p>
+<p><span class="font-semibold text-gray-600">Impacto Esperado:</span><br>[EX: Aumento de receita]</p>
+</div>
+</div>
+ 
+<div>
+<h4 class="text-xs font-bold uppercase text-gray-500 border-b pb-1 mb-2">Projeções Futuras (Próximo Mês)</h4>
+<p class="text-sm text-gray-700 italic">[Quais são as expectativas de resultado e as principais frentes de trabalho do coordenador para o próximo ciclo?]</p>
+</div>
+</div>
+</div>
+ 
+</div>
+</section>
+ 
+</main>
+ 
+<footer class="bg-white border-t border-gray-100 py-8">
+<div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-gray-400 text-xs">
+<p>&copy; 2026 - Relatório RAR Coordenação - AESI</p>
+<p class="mt-2 md:mt-0 font-bold">CONFIDENCIAL</p>
+</div>
+</footer>
+ 
+<script>
+function showSection(sectionId) {
+// Esconde todas as seções
+document.querySelectorAll('.content-section').forEach(section => {
+section.classList.remove('active');
+});
+ 
+// Mostra a seção desejada
+const target = document.getElementById(sectionId);
+if (target) {
+target.classList.add('active');
+}
+ 
+// Atualiza os estilos das abas de navegação
+document.querySelectorAll('.nav-btn').forEach(btn => {
+btn.classList.remove('tab-active');
+});
+const activeBtn = document.getElementById('btn-' + sectionId);
+if (activeBtn) {
+activeBtn.classList.add('tab-active');
+}
+ 
+// Rola suavemente para o topo ao trocar de aba
+window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
 </body>
 </html>
+ 
